@@ -4,7 +4,7 @@
 
 Diplomatura en Programacion UTNFRH. Materia Python
 
-![image](https://user-images.githubusercontent.com/78452543/226373168-eef4bc52-460c-416b-a5f5-7bb4e4bb54b4.png)
+![image](https://user-images.githubusercontent.com/78452543/226373319-eb08413d-b845-48b4-9337-0ff024070ee8.png)
 
 ## Dia y horario:
 
