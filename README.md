@@ -1,6 +1,10 @@
 # Python-UTNFRH
 
+![image](https://user-images.githubusercontent.com/78452543/226373060-8e4b5a69-95e2-4f1b-8c72-011381225024.png)
+
 Diplomatura en Programacion UTNFRH. Materia Python
+
+![image](https://user-images.githubusercontent.com/78452543/226373168-eef4bc52-460c-416b-a5f5-7bb4e4bb54b4.png)
 
 ## Dia y horario:
 
