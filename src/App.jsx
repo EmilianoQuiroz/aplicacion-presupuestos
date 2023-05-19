@@ -1,7 +1,9 @@
 import { useState } from 'react'
 // Importamos el Header
 import Header from './components/Header'
-//Importamos Icono
+// Importamos el modal 
+import Modal from './components/Modal'
+// Importamos Icono
 import IconoNuevoGasto from './img/nuevo-gasto.svg'
 
 function App() {
@@ -32,8 +34,11 @@ function App() {
         </div>
       )}
 
-        {modal && <p>Desde el modal</p>}
-        
+        {modal && 
+        <Modal 
+          setModal ={setModal}
+        />}
+
       </div>
   )
 }
