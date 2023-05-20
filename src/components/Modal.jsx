@@ -1,9 +1,13 @@
 import CerrarBtn from '../img/cerrar.svg'
 
-const Modal = ({setModal, animarModal}) => {
+const Modal = ({setModal, animarModal, setAnimarModal}) => {
 
 const ocultarModal = () => {
-    setModal(false)
+    setAnimarModal(false)
+
+    setTimeout(() => {
+      setModal(false)
+    }, 500)
 }
 
   return (
@@ -16,7 +20,7 @@ const ocultarModal = () => {
             />
         </div>
 
-        <form className={`formulario ${animarModal} ? "animar" : ''`}>
+        <form className={`formulario ${animarModal ? "animar" : 'cerrar'}`}>
           <legend>Nuevo gasto</legend>
         </form>
     </div>
