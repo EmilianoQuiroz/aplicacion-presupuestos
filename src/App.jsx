@@ -3,6 +3,8 @@ import { useState } from 'react'
 import Header from './components/Header'
 // Importamos el modal 
 import Modal from './components/Modal'
+// Importamos la funcion para generar un Id unico
+import { generarId } from './helpers'
 // Importamos Icono
 import IconoNuevoGasto from './img/nuevo-gasto.svg'
 
@@ -14,12 +16,25 @@ function App() {
   const [modal, setModal] = useState(false)
   const [animarModal, setAnimarModal] = useState(false)
 
+  const [gastos, setGastos] = useState([])
   const handleNuevoGasto = () => {
     setModal(true)
 
     setTimeout(() => {
       setAnimarModal(true)
     }, 500);
+  }
+
+  const guardarGasto = gasto => {
+    gasto.id = generarId()
+    setGastos([...gastos, gasto])
+
+    setAnimarModal(false)
+
+    setTimeout(() => {
+      setModal(false)
+    }, 500)
+    
   }
   return (
       <div>
@@ -45,6 +60,7 @@ function App() {
           setModal ={setModal}
           animarModal ={animarModal}
           setAnimarModal={setAnimarModal}
+          guardarGasto={guardarGasto}
         />}
 
       </div>
