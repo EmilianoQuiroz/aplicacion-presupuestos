@@ -29,6 +29,7 @@ function App() {
 
   const guardarGasto = gasto => {
     gasto.id = generarId()
+    gasto.fecha = Date.now()// Retornamos la fecha en la que se genera el objeto
     setGastos([...gastos, gasto])
 
     setAnimarModal(false)
