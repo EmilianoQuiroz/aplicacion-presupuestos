@@ -3,6 +3,8 @@ import { useState } from 'react'
 import Header from './components/Header'
 // Importamos el modal 
 import Modal from './components/Modal'
+// Importamos el listado de gastos
+import ListadoGastos from './components/ListadoGastos'
 // Importamos la funcion para generar un Id unico
 import { generarId } from './helpers'
 // Importamos Icono
@@ -34,7 +36,7 @@ function App() {
     setTimeout(() => {
       setModal(false)
     }, 500)
-    
+
   }
   return (
       <div>
@@ -46,13 +48,20 @@ function App() {
         />
 
       {isValidPresupuesto && (
-        <div className="nuevo-gasto">
-          <img
-            src={IconoNuevoGasto}
-            alt='Icono nuevo gasto'
-            onClick={handleNuevoGasto}
-          />
-        </div>
+        <>
+          <main>
+            <ListadoGastos 
+              gastos={gastos}
+            />
+          </main>
+          <div className="nuevo-gasto">
+            <img
+              src={IconoNuevoGasto}
+              alt='Icono nuevo gasto'
+              onClick={handleNuevoGasto}
+            />
+          </div>
+        </>
       )}
 
         {modal && 
