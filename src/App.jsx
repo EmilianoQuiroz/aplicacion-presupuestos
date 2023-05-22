@@ -52,11 +52,16 @@ function App() {
       gasto.fecha = Date.now()// Retornamos la fecha en la que se genera el objeto
       setGastos([...gastos, gasto])
     }
-    
+
     setAnimarModal(false)
     setTimeout(() => {
       setModal(false)
     }, 500)
+  }
+
+  const eliminarGasto = id => {
+    const gastosActualizados = gastos.filter(gasto => gasto.id !== id)
+    setGastos(gastosActualizados)
   }
   return (
       <div className={modal  ? 'fijar' : ''}>
@@ -74,6 +79,7 @@ function App() {
             <ListadoGastos 
               gastos={gastos}
               setGastoEditar={setGastoEditar}
+              eliminarGasto={eliminarGasto}
             />
           </main>
           <div className="nuevo-gasto">
