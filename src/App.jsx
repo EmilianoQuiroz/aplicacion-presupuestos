@@ -62,6 +62,7 @@ function App() {
   const eliminarGasto = id => {
     const gastosActualizados = gastos.filter(gasto => gasto.id !== id)
     setGastos(gastosActualizados)
+    setGastoEditar({})
   }
   return (
       <div className={modal  ? 'fijar' : ''}>
@@ -99,6 +100,7 @@ function App() {
           setAnimarModal={setAnimarModal}
           guardarGasto={guardarGasto}
           gastoEditar={gastoEditar}
+          setGastoEditar={setGastoEditar}
         />}
 
       </div>
