@@ -24,3 +24,6 @@ Aplicacion de control de gastos con React, Vite y SweetAlert
 https://aplicacion-presupuestos.netlify.app
 
 ### Desktop:
+
+https://github.com/EmilianoQuiroz/aplicacion-presupuestos/assets/78452543/67ffdeb4-18fb-4a60-9fd7-cf7dcaf38481
+
