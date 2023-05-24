@@ -4,6 +4,8 @@ import { useState, useEffect } from 'react'
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 // Importamos la hoja de estilos
 import 'react-circular-progressbar/dist/styles.css'
+// Importamos el Swal de SweetAlert 2
+import Swal from 'sweetalert2'
 
 
 const ControlPresupuesto = ({
@@ -40,13 +42,34 @@ const ControlPresupuesto = ({
     }
 
     const handleResetApp = () => {
-        const resultado = confirm('¿Deseas resetear la aplicacion?')
+        // const resultado = confirm('¿Deseas resetear la aplicacion?')
 
-        if(resultado){
-            setGastos([])
-            setPresupuesto(0)
-            setIsValidPresupuesto(false)
-        }
+        Swal.fire({
+            title: '¿Deseas resetear la aplicacion?',
+            text: "Todos los datos seran eliminados",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            cancelButtonText: 'Cancelar',
+            confirmButtonText: 'Confirmar'
+          }).then((result) => {
+            if (result.isConfirmed) {
+                setGastos([])
+                setPresupuesto(0)
+                setIsValidPresupuesto(false)
+              Swal.fire(
+                'Eliminado!',
+                'La aplicacin fue reseteada correctamente',
+                'success'
+              )
+            }
+          })
+        // if(resultado){
+        //     setGastos([])
+        //     setPresupuesto(0)
+        //     setIsValidPresupuesto(false)
+        // }
     }
 
   return (
