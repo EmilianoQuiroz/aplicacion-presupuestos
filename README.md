@@ -1,9 +1,8 @@
 # aplicacion-presupuestos
 Aplicacion de control de gastos con React, Vite y SweetAlert
 
-## Deploy: aplicacion-presupuestos.netlify.app
-
 ## Instalacion en local:
+
 - Clonar el repositorio
     
       git clone https://github.com/EmilianoQuiroz/aplicacion-presupuestos.git
